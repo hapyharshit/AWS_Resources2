@@ -10,6 +10,11 @@ resource "aws_instance" "webserver" {
     Name = "webserver"
   }
   ebs_optimized = true
+
+  metadata_options {
+    http_endpoint = "disabled"
+    http_tokens   = "required"
+  }
 }
 
 resource "aws_s3_bucket" "accuricsbucketdemo" {
