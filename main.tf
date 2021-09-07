@@ -9,6 +9,7 @@ resource "aws_instance" "webserver" {
   tags = {
     Name = "webserver"
   }
+  ebs_optimized = true
 }
 
 resource "aws_s3_bucket" "accuricsbucketdemo" {
